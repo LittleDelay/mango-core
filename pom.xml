@@ -13,10 +13,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <modules>
-        <module>mango-core-api</module>
-        <module>mango-core-service</module>
-    </modules>
 
     <dependencies>
         <dependency>
