@@ -39,6 +39,7 @@ public enum BizExceptionEnum {
     TOKEN_ERROR(1902, "非法Token,请重新登录!"),
     SIGN_ERROR(1903, "签名验证失败"),
     TOKEN_ERROR_CID(1904, "非法Token,无法解析公司主键!"),
+    NOT_TOKEN(1905, "请先登录!"),
 
     /**
      * 字典
