@@ -70,6 +70,7 @@ public enum BizExceptionEnum {
     CANT_DELETE_ADMIN(2204, "不能删除超级管理员"),
     CANT_FREEZE_ADMIN(2205, "不能冻结超级管理员"),
     CANT_CHANGE_ADMIN(2206, "不能修改超级管理员角色"),
+    SYSTEM_NO_AUTH(2207, "没有权限"),
 
     /**
      * 账户问题

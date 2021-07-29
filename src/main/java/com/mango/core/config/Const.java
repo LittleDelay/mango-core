@@ -16,4 +16,9 @@ public class Const implements Serializable {
      */
     public static final String TOKEN_NAME = "Admin-Token";
 
+    /**
+     * 批量保存的条数
+     */
+    public static final int BATCH_SAVE_SIZE = 200;
+
 }
