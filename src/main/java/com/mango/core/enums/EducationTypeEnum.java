@@ -3,51 +3,68 @@ package com.mango.core.enums;
 import java.util.Objects;
 
 /**
- * 文件类型
+ * 学历信息
  *
  * @author xs.Liu
  * @version 1.0.0
- * @since 2021/3/5 11:44
+ * @since 2021/3/5 11:45
  */
-public enum FileType {
+public enum EducationTypeEnum {
 
     /**
-     * 图片类
+     * 未定义
      */
-    JPG(1, "jpg"),
-    BMP(1, "bmp"),
-    JPEG(1, "jpeg"),
-    PNG(1, "png"),
+    UNDEFINE(0, "未定义"),
 
     /**
-     * 文档类
+     * 初中
      */
-    TXT(2, "txt"),
-    DOC(2, "doc"),
-    DOCX(2, "docx"),
-    XLS(2, "xls"),
-    PDF(2, "pdf"),
-    PPT(2, "ppt"),
+    MIDDLE(1, "初中"),
 
     /**
-     * 视频类
+     * 高中
      */
-    MP4(3, "mp4"),
-    AVI(3, "avi"),
-    MOV(3, "mov"),
-    WMV(3, "wmv"),
-    WEBM(3, "webm"),
-    RMVB(3, "rmvb"),
+    HIGH(2, "高中"),
 
     /**
-     * 音频类
+     * 中专
      */
-    MP3(4, "mp3");
+    TECHNICAL(3, "中专"),
+
+    /**
+     * 大专
+     */
+    COLLEGE(4, "大专"),
+
+    /**
+     * 本科
+     */
+    BACHELOR(5, "本科"),
+
+    /**
+     * 硕士
+     */
+    MASTER(6, "硕士"),
+
+    /**
+     * MBA
+     */
+    MBA(7, "MBA"),
+
+    /**
+     * EMBA
+     */
+    EMBA(8, "EMBA"),
+
+    /**
+     * 博士
+     */
+    PHD(9, "博士");
 
     private final int code;
     private final String name;
 
-    private FileType(int code, String name) {
+    private EducationTypeEnum(int code, String name) {
         this.code = code;
         this.name = name;
     }
@@ -60,9 +77,9 @@ public enum FileType {
         return code;
     }
     public static String getNameByCode(Integer code) {
-        FileType[] var1 = values();
+        EducationTypeEnum[] var1 = values();
 
-        for (FileType status : var1) {
+        for (EducationTypeEnum status : var1) {
             if (Objects.equals(code, status.getCode())) {
                 return status.getName();
             }
@@ -72,9 +89,9 @@ public enum FileType {
     }
 
     public static Integer getCodeByName(String name) {
-        FileType[] var1 = values();
+        EducationTypeEnum[] var1 = values();
 
-        for (FileType status : var1) {
+        for (EducationTypeEnum status : var1) {
             if (Objects.equals(name, status.getName())) {
                 return status.getCode();
             }
@@ -82,5 +99,4 @@ public enum FileType {
 
         return 0;
     }
-
 }

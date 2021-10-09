@@ -9,7 +9,7 @@ import java.util.Objects;
  * @version 1.0.0
  * @since 2021/3/5 11:38
  */
-public enum IdType {
+public enum IdTypeEnum {
 
     /**
      * 未定义
@@ -54,7 +54,7 @@ public enum IdType {
     private final int code;
     private final String name;
 
-    private IdType(int code, String name) {
+    private IdTypeEnum(int code, String name) {
         this.code = code;
         this.name = name;
     }
@@ -67,9 +67,9 @@ public enum IdType {
         return code;
     }
     public static String getNameByCode(Integer code) {
-        IdType[] var1 = values();
+        IdTypeEnum[] var1 = values();
 
-        for (IdType status : var1) {
+        for (IdTypeEnum status : var1) {
             if (Objects.equals(code, status.getCode())) {
                 return status.getName();
             }
@@ -79,9 +79,9 @@ public enum IdType {
     }
 
     public static Integer getCodeByName(String name) {
-        IdType[] var1 = values();
+        IdTypeEnum[] var1 = values();
 
-        for (IdType status : var1) {
+        for (IdTypeEnum status : var1) {
             if (Objects.equals(name, status.getName())) {
                 return status.getCode();
             }
