@@ -74,6 +74,13 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
+
+        <!-- jsoup 是一款Java 的HTML解析器 -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.8.3</version>
+        </dependency>
     </dependencies>
 
     <!-- 私服配置 -->
