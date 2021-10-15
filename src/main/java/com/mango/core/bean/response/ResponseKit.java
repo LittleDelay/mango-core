@@ -9,23 +9,23 @@ package com.mango.core.bean.response;
  */
 public class ResponseKit {
 
-    public static SuccessResponseData success() {
+    public static ApiResponse success() {
         return new SuccessResponseData();
     }
 
-    public static <T> SuccessResponseData success(T object) {
+    public static <T> ApiResponse<T> success(T object) {
         return new SuccessResponseData(object);
     }
 
-    public static <T> SuccessResponseData success(String message, T object) {
+    public static <T> ApiResponse<T> success(String message, T object) {
         return new SuccessResponseData(message, object);
     }
 
-    public static ErrorResponseData fail(Integer code, String message) {
+    public static ApiResponse fail(Integer code, String message) {
         return new ErrorResponseData(code, message);
     }
 
-    public static ErrorResponseData fail(Integer code, String message, Object object) {
+    public static ApiResponse fail(Integer code, String message, Object object) {
         return new ErrorResponseData(code, message, object);
     }
 
